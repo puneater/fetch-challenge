@@ -12,6 +12,7 @@ def process_receipts():
     global receipt_data
     generated_id = str(uuid.uuid4())
     receipt_data[generated_id] = request.get_json()
+
     return jsonify({
         'id': generated_id
     })
